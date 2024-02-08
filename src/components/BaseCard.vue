@@ -1,5 +1,8 @@
 <template>
   <div>
+    <header>
+      <slot name="myNamedHeader"></slot>
+    </header>
     <slot></slot>
   </div>
 </template>
