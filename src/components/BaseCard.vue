@@ -1,7 +1,7 @@
 <template>
   <div>
-    <header v-if="$slots.myNamedHeader">
-      <slot name="myNamedHeader">
+    <header v-if="$slots.header">
+      <slot name="header">
         <!-- <h2>The Default</h2> -->
       </slot>
     </header>
@@ -12,15 +12,13 @@
 <script>
 export default {
   mounted() {
-    console.log("this.$slots", this.$slots);
-    console.log("this.$slots.default", this.$slots.default);
-    console.log("this.$slots.myNamedHeader", this.$slots.myNamedHeader);
+    console.log(this.$slots.header);
   },
 };
 </script>
 
 <style scoped>
-section header {
+header {
   display: flex;
   justify-content: space-between;
   align-items: center;
