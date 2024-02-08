@@ -1,12 +1,13 @@
 <template>
   <div>
-    <TheHeader />
-    <BadgeList></BadgeList>
-    <UserInfo
+    <the-header></the-header>
+    <!-- <TheHeader /> -->
+    <badge-list></badge-list>
+    <user-info
       :full-name="activeUser.name"
       :info-text="activeUser.description"
       :role="activeUser.role"
-    ></UserInfo>
+    ></user-info>
   </div>
 </template>
 
