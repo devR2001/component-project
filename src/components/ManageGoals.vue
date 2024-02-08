@@ -26,11 +26,11 @@ export default {
     setGoal() {
       const enteredValue = this.$refs.goal.value;
       if (enteredValue === "") {
-        this.inputIsInvalid === true;
+        this.inputIsInvalid = true;
       }
     },
     confirmError() {
-      this.inputIsInvalid === false;
+      this.inputIsInvalid = false;
     },
   },
 };
