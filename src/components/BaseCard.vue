@@ -1,14 +1,22 @@
 <template>
   <div>
-    <header>
-      <slot name="myNamedHeader"></slot>
+    <header v-if="$slots.myNamedHeader">
+      <slot name="myNamedHeader">
+        <!-- <h2>The Default</h2> -->
+      </slot>
     </header>
     <slot></slot>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  mounted() {
+    console.log("this.$slots", this.$slots);
+    console.log("this.$slots.default", this.$slots.default);
+    console.log("this.$slots.myNamedHeader", this.$slots.myNamedHeader);
+  },
+};
 </script>
 
 <style scoped>
